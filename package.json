@@ -1,6 +1,6 @@
 {
   "name": "my-website",
-  "homepage": ".",
+  "homepage": "https://stha4us.github.io/my-website",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -36,5 +36,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0",
+    "react-router-dom": "^7.10.1"
   }
 }
