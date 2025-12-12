@@ -62,7 +62,7 @@ const SocialLinks = () => {
           key={index}
           href={link.url}
           target="_blank"
-                                                                                                                                                      rel="noopener noreferrer"
+          rel="noopener noreferrer"
           aria-label={link.label}
           className="text-gray-800 text-2xl transition-colors duration-300 hover:text-gray-600"
         >
