@@ -1,11 +1,11 @@
 // import logo from './logo.svg';
 import { useState } from 'react';
 import './App.css';
-import { BrowserRouter } from 'react-router-dom';
+// import { BrowserRouter } from 'react-router-dom';
 
-<BrowserRouter basename="/my-website">
+{/* <BrowserRouter basename="/my-website">
   <App />
-</BrowserRouter>
+</BrowserRouter> */}
 
 // Child Component: Header
 const Header = () => {
@@ -177,13 +177,7 @@ const TextSection = ({ selectedCategory, onCategorySelect }) => {
 export default function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
 
-  return (
-    <>
-      <link 
-        rel="stylesheet" 
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      />
-      
+  return (      
       <div className="min-h-screen bg-gray-100 font-serif">
         <div className="max-w-7xl mx-auto px-5 py-10">
           <Header />
@@ -202,6 +196,5 @@ export default function App() {
           </div>
         </div>
       </div>
-    </>
   );
 }
