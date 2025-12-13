@@ -3,10 +3,6 @@ import { useState } from 'react';
 import './App.css';
 // import { BrowserRouter } from 'react-router-dom';
 
-{/* <BrowserRouter basename="/my-website">
-  <App />
-</BrowserRouter> */}
-
 // Child Component: Header
 const Header = () => {
   return (
