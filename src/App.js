@@ -6,7 +6,7 @@ import './App.css';
 // Child Component: Header
 const Header = () => {
   return (
-    <div className="text-lg italic text-gray-600 mb-10">
+    <div className="header text-lg italic text-gray-600 mb-10">
       Updates coming soon...
     </div>
   );
@@ -15,11 +15,11 @@ const Header = () => {
 // Child Component: Profile Image Section
 const ProfileImage = () => {
   return (
-    <div className="relative">
+    <div className="profile-section relative">
       <img 
         src="https://raw.githubusercontent.com/stha4us/my-website/main/assets/file_00000000074861fba133676790d08862.png" 
         alt="Profile" 
-        className="w-full max-w-[500px] h-auto grayscale rounded"
+        className="profile-image w-full max-w-[500px] h-auto grayscale rounded"
       />
     </div>
   );
@@ -30,7 +30,7 @@ const CategoryButton = ({ title, onSelect, isActive }) => {
   return (
     <button
       onClick={() => onSelect(title)}
-      className={`w-full py-5 px-10 rounded-full text-sm font-bold tracking-wider transition-all duration-300 ${
+      className={`category-button w-full py-5 px-10 rounded-full text-sm font-bold tracking-wider transition-all duration-300 ${
         isActive 
           ? 'bg-gray-700 text-white shadow-lg' 
           : 'bg-gray-800 text-white hover:bg-gray-700 hover:-translate-y-1 hover:shadow-md'
@@ -52,7 +52,7 @@ const SocialLinks = () => {
   ];
 
   return (
-    <div className="flex gap-8 mt-16">
+    <div className="social-links flex gap-8 mt-16">
       {socialLinks.map((link, index) => (
         <a
           key={index}
@@ -117,7 +117,7 @@ const ContentDetail = ({ category }) => {
   const currentContent = content[category];
 
   return (
-    <div className="mt-12 p-8 bg-white rounded-lg shadow-lg">
+    <div className="content-detail mt-12 p-8 bg-white rounded-lg shadow-lg">
       <h2 className="text-3xl font-bold text-gray-800 mb-4">{currentContent.title}</h2>
       <p className="text-lg text-gray-600 mb-6">{currentContent.description}</p>
       <ul className="space-y-3">
@@ -142,16 +142,16 @@ const TextSection = ({ selectedCategory, onCategorySelect }) => {
   ];
 
   return (
-    <div className="p-5">
-      <h1 className="text-6xl md:text-7xl font-bold leading-tight mb-8">
+    <div className="text-section p-5">
+      <h1 className="greeting text-6xl md:text-7xl font-bold leading-tight mb-8">
         Hello,<br />I am Utsab
       </h1>
 
-      <p className="text-xl text-gray-600 mb-10">
+      <p className="tagline text-xl text-gray-600 mb-10">
         Let's explore for endless opportunities awaiting us!
       </p>
 
-      <div className="flex flex-col gap-5 mb-16">
+      <div className="button-group flex flex-col gap-5 mb-16">
         {categories.map((category) => (
           <CategoryButton
             key={category}
@@ -174,11 +174,11 @@ export default function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
 
   return (      
-      <div className="min-h-screen bg-gray-100 font-serif">
-        <div className="max-w-7xl mx-auto px-5 py-10">
+      <div className="app-container min-h-screen bg-gray-100 font-serif">
+        <div className="main-wrapper max-w-7xl mx-auto px-5 py-10">
           <Header />
 
-          <div className="grid md:grid-cols-2 gap-16 items-start">
+          <div className="content-grid grid md:grid-cols-2 gap-16 items-start">
             <div className="order-2 md:order-1">
               <ProfileImage />
             </div>
