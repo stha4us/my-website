@@ -4,10 +4,15 @@ import './App.css';
 // import { BrowserRouter } from 'react-router-dom';
 
 // Child Component: Header
-const Header = () => {
+const Header = ({ onBackClick, showBack }) => {
   return (
-    <div className="header text-lg italic text-gray-600 mb-10">
-      Updates coming soon...
+    <div className="header">
+      {showBack && (
+        <button onClick={onBackClick} className="back-button">
+          ← Back to Home
+        </button>
+      )}
+      {!showBack && "Updates coming soon..."}
     </div>
   );
 };
@@ -15,26 +20,22 @@ const Header = () => {
 // Child Component: Profile Image Section
 const ProfileImage = () => {
   return (
-    <div className="profile-section relative">
+    <div className="profile-section">
       <img 
         src="https://raw.githubusercontent.com/stha4us/my-website/main/assets/file_00000000074861fba133676790d08862.png" 
         alt="Profile" 
-        className="profile-image w-full max-w-[500px] h-auto grayscale rounded"
+        className="profile-image"
       />
     </div>
   );
 };
 
 // Child Component: Category Button
-const CategoryButton = ({ title, onSelect, isActive }) => {
+const CategoryButton = ({ title, onSelect }) => {
   return (
     <button
       onClick={() => onSelect(title)}
-      className={`category-button w-full py-5 px-10 rounded-full text-sm font-bold tracking-wider transition-all duration-300 ${
-        isActive 
-          ? 'bg-gray-700 text-white shadow-lg' 
-          : 'bg-gray-800 text-white hover:bg-gray-700 hover:-translate-y-1 hover:shadow-md'
-      }`}
+      className="category-button"
     >
       {title}
     </button>
@@ -52,7 +53,7 @@ const SocialLinks = () => {
   ];
 
   return (
-    <div className="social-links flex gap-8 mt-16">
+    <div className="social-links">
       {socialLinks.map((link, index) => (
         <a
           key={index}
@@ -60,7 +61,6 @@ const SocialLinks = () => {
           target="_blank"
           rel="noopener noreferrer"
           aria-label={link.label}
-          className="text-gray-800 text-2xl transition-colors duration-300 hover:text-gray-600"
         >
           <i className={link.icon}></i>
         </a>
@@ -69,71 +69,8 @@ const SocialLinks = () => {
   );
 };
 
-// Child Component: Content Detail Pages
-const ContentDetail = ({ category }) => {
-  const content = {
-    'DATA, AI & BI': {
-      title: 'Data, AI & Business Intelligence',
-      description: 'Transforming raw data into actionable insights using cutting-edge AI and BI tools.',
-      points: [
-        'Machine Learning & Deep Learning',
-        'Data Visualization & Dashboards',
-        'Predictive Analytics',
-        'Business Intelligence Solutions'
-      ]
-    },
-    'ELECTRONICS AUTOMATION': {
-      title: 'Electronics Automation',
-      description: 'Designing intelligent automation systems for modern industrial and home applications.',
-      points: [
-        'IoT Device Integration',
-        'Smart Home Systems',
-        'Industrial Automation',
-        'Embedded Systems Development'
-      ]
-    },
-    'COMMUNITY ENGAGEMENT': {
-      title: 'Community Engagement',
-      description: 'Building connections and fostering collaborative environments for growth and innovation.',
-      points: [
-        'Tech Meetups & Workshops',
-        'Mentorship Programs',
-        'Open Source Contributions',
-        'Knowledge Sharing Sessions'
-      ]
-    },
-    'SHARED INTERESTS': {
-      title: 'Shared Interests',
-      description: 'Exploring diverse passions and connecting with like-minded individuals.',
-      points: [
-        'Technology Innovation',
-        'Creative Problem Solving',
-        'Continuous Learning',
-        'Collaborative Projects'
-      ]
-    }
-  };
-
-  const currentContent = content[category];
-
-  return (
-    <div className="content-detail mt-12 p-8 bg-white rounded-lg shadow-lg">
-      <h2 className="text-3xl font-bold text-gray-800 mb-4">{currentContent.title}</h2>
-      <p className="text-lg text-gray-600 mb-6">{currentContent.description}</p>
-      <ul className="space-y-3">
-        {currentContent.points.map((point, index) => (
-          <li key={index} className="flex items-center text-gray-700">
-            <span className="w-2 h-2 bg-gray-800 rounded-full mr-3"></span>
-            {point}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-};
-
-// Child Component: Text Section with Greeting
-const TextSection = ({ selectedCategory, onCategorySelect }) => {
+// HOME PAGE
+const HomePage = ({ onNavigate }) => {
   const categories = [
     'DATA, AI & BI',
     'ELECTRONICS AUTOMATION',
@@ -142,55 +79,274 @@ const TextSection = ({ selectedCategory, onCategorySelect }) => {
   ];
 
   return (
-    <div className="text-section p-5">
-      <h1 className="greeting text-6xl md:text-7xl font-bold leading-tight mb-8">
-        Hello,<br />I am Utsab
-      </h1>
+    <div className="content-grid">
+      <ProfileImage />
+      
+      <div className="text-section">
+        <h1 className="greeting">
+          Hello,<br />I am Utsab
+        </h1>
 
-      <p className="tagline text-xl text-gray-600 mb-10">
-        Let's explore for endless opportunities awaiting us!
-      </p>
+        <p className="tagline">
+          Let's explore for endless opportunities awaiting us!
+        </p>
 
-      <div className="button-group flex flex-col gap-5 mb-16">
-        {categories.map((category) => (
-          <CategoryButton
-            key={category}
-            title={category}
-            onSelect={onCategorySelect}
-            isActive={selectedCategory === category}
-          />
-        ))}
+        <div className="button-group">
+          {categories.map((category) => (
+            <CategoryButton
+              key={category}
+              title={category}
+              onSelect={onNavigate}
+            />
+          ))}
+        </div>
+
+        <SocialLinks />
       </div>
-
-      {selectedCategory && <ContentDetail category={selectedCategory} />}
-
-      <SocialLinks />
     </div>
   );
 };
 
-// Main App Component (Base Template)
-export default function App() {
-  const [selectedCategory, setSelectedCategory] = useState(null);
+// DATA, AI & BI PAGE
+const DataAIPage = () => {
+  return (
+    <div className="page-content">
+      <h1 className="page-title">Data, AI & Business Intelligence</h1>
+      
+      <div className="page-section">
+        <h2>About This Domain</h2>
+        <p>
+          Transforming raw data into actionable insights using cutting-edge AI and BI tools.
+          I specialize in building intelligent systems that drive business decisions and unlock
+          the power of data-driven strategies.
+        </p>
+      </div>
 
-  return (      
-      <div className="app-container min-h-screen bg-gray-100 font-serif">
-        <div className="main-wrapper max-w-7xl mx-auto px-5 py-10">
-          <Header />
-
-          <div className="content-grid grid md:grid-cols-2 gap-16 items-start">
-            <div className="order-2 md:order-1">
-              <ProfileImage />
-            </div>
-
-            <div className="order-1 md:order-2">
-              <TextSection 
-                selectedCategory={selectedCategory}
-                onCategorySelect={setSelectedCategory}
-              />
-            </div>
+      <div className="page-section">
+        <h2>Core Expertise</h2>
+        <div className="expertise-grid">
+          <div className="expertise-card">
+            <h3>Machine Learning & Deep Learning</h3>
+            <p>Building predictive models and neural networks for complex problem-solving.</p>
+          </div>
+          <div className="expertise-card">
+            <h3>Data Visualization & Dashboards</h3>
+            <p>Creating interactive dashboards that tell compelling data stories.</p>
+          </div>
+          <div className="expertise-card">
+            <h3>Predictive Analytics</h3>
+            <p>Forecasting trends and patterns to enable proactive decision-making.</p>
+          </div>
+          <div className="expertise-card">
+            <h3>Business Intelligence Solutions</h3>
+            <p>Implementing BI tools and strategies for organizational growth.</p>
           </div>
         </div>
       </div>
+
+      <div className="page-section">
+        <h2>Technologies</h2>
+        <div className="tech-tags">
+          <span className="tech-tag">Python</span>
+          <span className="tech-tag">TensorFlow</span>
+          <span className="tech-tag">PyTorch</span>
+          <span className="tech-tag">Tableau</span>
+          <span className="tech-tag">Power BI</span>
+          <span className="tech-tag">SQL</span>
+          <span className="tech-tag">Pandas</span>
+          <span className="tech-tag">Scikit-learn</span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// ELECTRONICS AUTOMATION PAGE
+const ElectronicsPage = () => {
+  return (
+    <div className="page-content">
+      <h1 className="page-title">Electronics Automation</h1>
+      
+      <div className="page-section">
+        <h2>About This Domain</h2>
+        <p>
+          Designing intelligent automation systems for modern industrial and home applications.
+          Bridging the physical and digital worlds through innovative IoT solutions and smart systems.
+        </p>
+      </div>
+
+      <div className="page-section">
+        <h2>Core Expertise</h2>
+        <div className="expertise-grid">
+          <div className="expertise-card">
+            <h3>IoT Device Integration</h3>
+            <p>Connecting devices and sensors to create seamless smart ecosystems.</p>
+          </div>
+          <div className="expertise-card">
+            <h3>Smart Home Systems</h3>
+            <p>Building intelligent home automation solutions for enhanced living.</p>
+          </div>
+          <div className="expertise-card">
+            <h3>Industrial Automation</h3>
+            <p>Implementing PLCs and SCADA systems for manufacturing efficiency.</p>
+          </div>
+          <div className="expertise-card">
+            <h3>Embedded Systems Development</h3>
+            <p>Creating firmware and hardware solutions for specialized applications.</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="page-section">
+        <h2>Technologies</h2>
+        <div className="tech-tags">
+          <span className="tech-tag">Arduino</span>
+          <span className="tech-tag">Raspberry Pi</span>
+          <span className="tech-tag">ESP32</span>
+          <span className="tech-tag">MQTT</span>
+          <span className="tech-tag">Node-RED</span>
+          <span className="tech-tag">C/C++</span>
+          <span className="tech-tag">PCB Design</span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// COMMUNITY ENGAGEMENT PAGE
+const CommunityPage = () => {
+  return (
+    <div className="page-content">
+      <h1 className="page-title">Community Engagement</h1>
+      
+      <div className="page-section">
+        <h2>About This Domain</h2>
+        <p>
+          Building connections and fostering collaborative environments for growth and innovation.
+          I believe in the power of community to drive learning, innovation, and positive change.
+        </p>
+      </div>
+
+      <div className="page-section">
+        <h2>Core Activities</h2>
+        <div className="expertise-grid">
+          <div className="expertise-card">
+            <h3>Tech Meetups & Workshops</h3>
+            <p>Organizing and hosting events to share knowledge and connect people.</p>
+          </div>
+          <div className="expertise-card">
+            <h3>Mentorship Programs</h3>
+            <p>Guiding aspiring developers and tech enthusiasts in their journey.</p>
+          </div>
+          <div className="expertise-card">
+            <h3>Open Source Contributions</h3>
+            <p>Contributing to projects that benefit the wider tech community.</p>
+          </div>
+          <div className="expertise-card">
+            <h3>Knowledge Sharing Sessions</h3>
+            <p>Speaking at conferences and creating educational content.</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="page-section">
+        <h2>Get Involved</h2>
+        <p>
+          Interested in collaborating or joining our community events? 
+          Reach out through social media or email to stay connected!
+        </p>
+      </div>
+    </div>
+  );
+};
+
+// SHARED INTERESTS PAGE
+const InterestsPage = () => {
+  return (
+    <div className="page-content">
+      <h1 className="page-title">Shared Interests</h1>
+      
+      <div className="page-section">
+        <h2>About This Domain</h2>
+        <p>
+          Exploring diverse passions and connecting with like-minded individuals.
+          Life is about continuous learning, creativity, and building meaningful connections.
+        </p>
+      </div>
+
+      <div className="page-section">
+        <h2>Core Interests</h2>
+        <div className="expertise-grid">
+          <div className="expertise-card">
+            <h3>Technology Innovation</h3>
+            <p>Exploring cutting-edge technologies and emerging trends.</p>
+          </div>
+          <div className="expertise-card">
+            <h3>Creative Problem Solving</h3>
+            <p>Approaching challenges with innovative and out-of-the-box thinking.</p>
+          </div>
+          <div className="expertise-card">
+            <h3>Continuous Learning</h3>
+            <p>Always curious, always growing, always exploring new domains.</p>
+          </div>
+          <div className="expertise-card">
+            <h3>Collaborative Projects</h3>
+            <p>Working together to create something greater than the sum of its parts.</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="page-section">
+        <h2>Beyond Technology</h2>
+        <p>
+          When not coding or building circuits, I enjoy photography, reading about philosophy,
+          and exploring nature. Always open to conversations about life, universe, and everything!
+        </p>
+      </div>
+    </div>
+  );
+};
+
+// Main App Component
+function App() {
+  const [currentPage, setCurrentPage] = useState('home');
+
+  const handleNavigate = (page) => {
+    setCurrentPage(page);
+    window.scrollTo(0, 0); // Scroll to top when navigating
+  };
+
+  const handleBackToHome = () => {
+    setCurrentPage('home');
+    window.scrollTo(0, 0);
+  };
+
+  const renderPage = () => {
+    switch (currentPage) {
+      case 'DATA, AI & BI':
+        return <DataAIPage />;
+      case 'ELECTRONICS AUTOMATION':
+        return <ElectronicsPage />;
+      case 'COMMUNITY ENGAGEMENT':
+        return <CommunityPage />;
+      case 'SHARED INTERESTS':
+        return <InterestsPage />;
+      default:
+        return <HomePage onNavigate={handleNavigate} />;
+    }
+  };
+
+  return (
+    <div className="app-container">
+      <div className="main-wrapper">
+        <Header 
+          onBackClick={handleBackToHome}
+          showBack={currentPage !== 'home'}
+        />
+        {renderPage()}
+      </div>
+    </div>
   );
 }
+
+export default App;
