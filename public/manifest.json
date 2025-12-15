@@ -11,6 +11,11 @@
       "src": "icon-smiley.png",
       "type": "image/png",
       "sizes": "64x64 32x32 24x24 16x16"
+    },
+    {
+      "src": "utsab_pp.jpeg",
+      "type": "image/jpeg",
+      "sizes": "64x64 32x32 24x24 16x16"
     }
   ],
   "start_url": ".",
