@@ -249,6 +249,51 @@
   animation: fadeIn 0.5s ease-in;
 }
 
+/* Page with side image layout */
+.page-with-image {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 64px;
+  align-items: start;
+  animation: fadeIn 0.5s ease-in;
+}
+
+@media (min-width: 768px) {
+  .page-with-image {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.page-image-section {
+  position: relative;
+  order: 2;
+}
+
+@media (min-width: 768px) {
+  .page-image-section {
+    order: 1;
+  }
+}
+
+.page-profile-image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  filter: grayscale(40%);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.page-text-section {
+  order: 1;
+}
+
+@media (min-width: 768px) {
+  .page-text-section {
+    order: 2;
+  }
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

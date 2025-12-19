@@ -274,14 +274,16 @@ const CommunityPage = () => {
 // SHARED INTERESTS PAGE
 const InterestsPage = () => {
   return (
-    <div className="page-content">
-      <div className="profile-section">
-      <img 
+    <div className="page-with-image">
+      <div className="page-image-section">
+        <img 
         src="https://raw.githubusercontent.com/stha4us/my-website/main/assets/file_team_posture.png" 
         alt="Profile" 
-        className="profile-image"
-      />
+        className="page-profile-image"
+        />
       </div>
+      
+      <div className="page-text-section">
       <h1 className="page-title">Shared Interests</h1>
       
       <div className="page-section">
@@ -330,6 +332,7 @@ const InterestsPage = () => {
         </p>
       </div>
     </div>
+  </div>
   );
 };
 
