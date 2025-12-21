@@ -114,7 +114,7 @@ const DataAIPage = () => {
       <h1 className="page-title">Data, AI & Business Intelligence</h1>
       
       <div className="page-section">
-        <h2>About This Domain</h2>
+        <h2>About: </h2>
         <p>
           Transforming raw data into actionable insights using cutting-edge AI and BI tools.
           I specialize in building intelligent systems that drive business decisions and unlock
@@ -176,7 +176,7 @@ const ElectronicsPage = () => {
       <h1 className="page-title">Electronics Automation</h1>
       
       <div className="page-section">
-        <h2>About This Domain</h2>
+        <h2>About: </h2>
         <p>
           Designing intelligent automation systems for modern industrial and home applications.
           Bridging the physical and digital worlds through innovative IoT solutions and smart systems.
@@ -231,7 +231,7 @@ const CommunityPage = () => {
       <h1 className="page-title">Community Engagement</h1>
       
       <div className="page-section">
-        <h2>About This Domain</h2>
+        <h2>About: </h2>
         <p>
           Building connections and fostering collaborative environments for growth and innovation.
           I believe in the power of community to drive learning, innovation, and positive change.
@@ -287,7 +287,7 @@ const InterestsPage = () => {
       <h1 className="page-title">Shared Interests</h1>
       
       <div className="page-section">
-        <h2>About This Domain</h2>
+        <h2>About: </h2>
         <p>
           Exploring diverse passions and connecting with like-minded individuals.
           Life is about continuous learning, creativity, enjoying the interests and building meaningful connections.
