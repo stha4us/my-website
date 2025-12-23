@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
-// import { BrowserRouter } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 // Child Component: Header
 const Header = ({ onBackClick, showBack }) => {
@@ -337,7 +337,7 @@ const InterestsPage = () => {
   );
 };
 
-// ABAOUT ME PAGE
+// PROFESSIONAL SUMMARY PAGE
 const ProfessionalPage = () => {
   const resumeLink = [
       { icon: 'fab fa-google-drive', url: 'https://docs.google.com/document/d/1hVlw-LCBRRiyOPoszCMa_kKiUOD12ScC-CvNVR-jkAs/edit?tab=t.0', label: 'Instagram' }
@@ -420,15 +420,58 @@ const ProfessionalPage = () => {
 
 // Main App Component
 function App() {
-  const [currentPage, setCurrentPage] = useState('home');
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // Initialize state from sessionStorage, URL or default to 'home'
+  const [currentPage, setCurrentPage] = useState(() => {
+  // const [currentPage, setCurrentPage] = useState('home');
+  // First check URL
+  const pathPage = location.pathname.slice(1); // Remove leading '/'
+    if (pathPage) {
+      return decodeURIComponent(pathPage);
+    }
+  
+   // Then check sessionStorage  
+  try {
+      const savedPage = sessionStorage.getItem('currentPage');
+      return savedPage || 'home';
+    } catch (error) {
+      console.error('Error reading from sessionStorage:', error);
+      return 'home';
+    }
+  });
+
+  // Save to sessionStorage whenever currentPage changes
+  useEffect(() => {
+    try {
+      sessionStorage.setItem('currentPage', currentPage);
+    } catch (error) {
+      console.error('Error writing to sessionStorage:', error);
+    }
+  }, [currentPage]);
+
+    // Sync state with URL changes (browser back/forward)
+  useEffect(() => {
+    const pathPage = location.pathname.slice(1);
+    const decodedPage = pathPage ? decodeURIComponent(pathPage) : 'home';
+    
+    if (decodedPage !== currentPage) {
+      setCurrentPage(decodedPage);
+      window.scrollTo(0, 0);
+    }
+  }, [location.pathname, currentPage]);
 
   const handleNavigate = (page) => {
     setCurrentPage(page);
+    // Push to browser history
+    navigate(`/${encodeURIComponent(page)}`, { replace: false });
     window.scrollTo(0, 0); // Scroll to top when navigating
   };
 
   const handleBackToHome = () => {
     setCurrentPage('home');
+    navigate('/', { replace: false });
     window.scrollTo(0, 0);
   };
 
