@@ -113,7 +113,9 @@
   max-width: 500px;
   height: auto;
   filter: grayscale(100%);
-  border-radius: 4px;
+  border-radius: 10%;
+  object-fit: cover;
+  border: 3px solid #ddd;
 }
 
 /* Text Section */
@@ -229,7 +231,7 @@
   display: flex;
   gap: 72px;
   margin-top: 64px;
-  margin-bottom: 32px;
+  margin-bottom: 5px;
   justify-content: center;
 }
 
