@@ -9,10 +9,11 @@ const ProfessionalPage = () => {
       
       <div className="page-section">
         <p>
-          A tech enthusiasts with more than 7 years of experience in Data, BI and ML domain grounded in 10+ years 
-          of professional experience in IT & Tech world. Passionate to explore endless opportunities in the data world,
-          I specialize in transforming raw data into analytical and predictive solutions leveraging python, AI and 
-          data tools to make better data-driven decisions.
+          A data & analytics professional with over 8 years of experience in BI, ML, Data Analytics and forecasting industry. Grounded in 10+ years 
+          of professional experience in IT & tech world, I am passionate to explore endless opportunities in the data world, leveraging python, AI and 
+          modern data tools. I specialize in translating complex data into actionable insights, supporting data governance and security practices,
+          and building scalable, reliable data systems that enable informed data driven decision-making 
+          
         </p>
       </div>
 
