@@ -8,7 +8,8 @@ const HomePage = ({ onNavigate }) => {
     'ELECTRONICS AUTOMATION',
     'COMMUNITY ENGAGEMENT',
     'SHARED INTERESTS',
-    'PROFESSIONAL SUMMARY'
+    'PROFESSIONAL SUMMARY',
+    'TIPS & TRICKS'
   ];
 
   return (
