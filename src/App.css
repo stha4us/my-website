@@ -115,7 +115,7 @@
   filter: grayscale(100%);
   border-radius: 10%;
   object-fit: cover;
-  border: 3px solid #ddd;
+  border: 2px solid #ddd;
 }
 
 /* Text Section */
@@ -228,9 +228,10 @@
 
 /* Social Links */
 .social-links {
+  position: relative;
   display: flex;
-  gap: 72px;
-  margin-top: 64px;
+  gap: 48px;
+  margin-top: 5px;
   margin-bottom: 5px;
   justify-content: center;
 }
@@ -284,8 +285,9 @@
   max-width: 800px;
   height: auto;
   filter: grayscale(40%);
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  box-shadow: 6px rgba(0, 0, 0, 0.15);
+  margin-left: 40px;
 }
 
 .page-text-section {
@@ -414,7 +416,7 @@
   }
   
   .social-links {
-    gap: 24px;
+    gap: 48px;
   }
 
   .page-title {

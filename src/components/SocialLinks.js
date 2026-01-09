@@ -9,7 +9,7 @@ const SocialLinks = () => {
   ];
 
   return (
-    <div className="social-links">
+    <div className="social-links" >
       {socialLinks.map((link, index) => (
         <a
           key={index}

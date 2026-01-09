@@ -8,13 +8,13 @@ const HomePage = ({ onNavigate }) => {
     'ELECTRONICS AUTOMATION',
     'COMMUNITY ENGAGEMENT',
     'SHARED INTERESTS',
-    'PROFESSIONAL SUMMARY'
+    'PROFESSIONAL SUMMARY',
+    'TIPS & TRICKS'
   ];
 
   return (
   <div className="content-grid">
     <ProfileImage />
-      
     <div className="text-section">
       <h1 className="greeting">
         Hello,<br />I am Utsab
@@ -33,7 +33,6 @@ const HomePage = ({ onNavigate }) => {
           />
         ))}
       </div>
-
       <SocialLinks />
     </div>
   </div>

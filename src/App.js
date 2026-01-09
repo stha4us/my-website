@@ -12,6 +12,7 @@ import ElectronicsPage from './pages/ElectronicsPage';
 import CommunityPage from './pages/CommunityPage';
 import InterestsPage from './pages/InterestsPage';
 import ProfessionalPage from './pages/ProfessionalPage';
+import TipsnTricksPage from './pages/Tips&TricksPage';
 
 // Main App Component
 function App() {
@@ -83,6 +84,8 @@ function App() {
         return <InterestsPage />;
       case 'PROFESSIONAL SUMMARY':
         return <ProfessionalPage />;
+      case 'TIPS & TRICKS':
+        return <TipsnTricksPage />;  
       default:
         return <HomePage onNavigate={handleNavigate} />;
     }

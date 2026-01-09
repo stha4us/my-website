@@ -1,7 +1,7 @@
 // PROFESSIONAL SUMMARY PAGE
 const ProfessionalPage = () => {
   const resumeLink = [
-      { icon: 'fab fa-google-drive', url: 'https://docs.google.com/document/d/1hVlw-LCBRRiyOPoszCMa_kKiUOD12ScC-CvNVR-jkAs/edit?tab=t.0', label: 'Instagram' }
+      { icon: 'fab fa-google-drive', url: 'https://docs.google.com/document/d/1hVlw-LCBRRiyOPoszCMa_kKiUOD12ScC-CvNVR-jkAs/edit?tab=t.0', label: 'Google' }
       ];
   return (
     <div className="page-content">
