@@ -42,6 +42,7 @@ const TipsnTricksPage = () => {
           <span className="tech-tag">If you can do anything within next 5 min, do it now.</span>
           <span className="tech-tag">Schedule a calendar and routine, not a to do list.</span>
           <span className="tech-tag">Understanding problem is winning 1/2 of the battle.</span>
+          <span className="tech-tag">Live in present before you treasure the moment in future.</span>
         </div>
       </div>
     </div>
