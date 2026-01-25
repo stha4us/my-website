@@ -20,7 +20,7 @@ from rest_framework import routers
 from homepage import views
 
 router = routers.DefaultRouter()
-router.register(r'homepage', views.HomepageView, 'homepage')
+router.register(r'homepages', views.HomepageView, 'homepage')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
