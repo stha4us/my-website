@@ -2,7 +2,7 @@
 const TipsnTricksPage = () => {
   return (
     <div className="page-content">
-      <h1 className="page-title">Tips & Tricks</h1>
+      <h1 className="page-title">Lifestyle - Tips & Tricks</h1>
       
       <div className="page-section">
         <p>
@@ -43,6 +43,7 @@ const TipsnTricksPage = () => {
           <span className="tech-tag">Schedule a calendar and routine, not a to do list.</span>
           <span className="tech-tag">Understanding problem is winning 1/2 of the battle.</span>
           <span className="tech-tag">Live in present before you treasure the moment in future.</span>
+          <span className="tech-tag">Competition leads to dissatisfaction, responsibility leads to achievement.</span>
         </div>
       </div>
     </div>

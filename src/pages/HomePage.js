@@ -9,7 +9,7 @@ const HomePage = ({ onNavigate }) => {
     'COMMUNITY ENGAGEMENT',
     'SHARED INTERESTS',
     'PROFESSIONAL SUMMARY',
-    'TIPS & TRICKS'
+    'LIFESTYLE - TIPS & TRICKS'
   ];
 
   return (
