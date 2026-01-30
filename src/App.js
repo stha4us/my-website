@@ -84,7 +84,7 @@ function App() {
         return <InterestsPage />;
       case 'PROFESSIONAL SUMMARY':
         return <ProfessionalPage />;
-      case 'TIPS & TRICKS':
+      case 'LIFESTYLE - TIPS & TRICKS':
         return <TipsnTricksPage />;  
       default:
         return <HomePage onNavigate={handleNavigate} />;
