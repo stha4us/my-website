@@ -1,8 +1,8 @@
-// TIPS & TRICKS PAGE
-const TipsnTricksPage = () => {
+// LIFESTYLE & MOTIVATION PAGE
+const LifestyleMotivationPage = () => {
   return (
     <div className="page-content">
-      <h1 className="page-title">Lifestyle - Tips & Tricks</h1>
+      <h1 className="page-title">Lifestyle & Motivation</h1>
       
       <div className="page-section">
         <p>
@@ -11,7 +11,7 @@ const TipsnTricksPage = () => {
       </div>
 
       <div className="page-section">
-        <h2>Tricks</h2>
+        <h2>Lifestyle Tricks</h2>
         <div className="expertise-grid">
           <div className="expertise-card">
             <h3>Folding T-shirts</h3>
@@ -36,18 +36,18 @@ const TipsnTricksPage = () => {
       </div>
       
       <div className="page-section">
-        <h2>Tips</h2>
+        <h2>Motivation</h2>
         <div className="tech-tags">
           <span className="tech-tag">To overcome procrastination beat your future self & do it now. </span>
           <span className="tech-tag">If you can do anything within next 5 min, do it now.</span>
           <span className="tech-tag">Schedule a calendar and routine, not a to do list.</span>
           <span className="tech-tag">Understanding problem is winning 1/2 of the battle.</span>
           <span className="tech-tag">Live in present before you treasure the moment in future.</span>
-          <span className="tech-tag">Competition leads to dissatisfaction, responsibility leads to achievement.</span>
+          <span className="tech-tag">Competition leads to dissatisfaction, responsibility leads to growth.</span>
         </div>
       </div>
     </div>
   );
 };
 
-export default TipsnTricksPage;
+export default LifestyleMotivationPage;
