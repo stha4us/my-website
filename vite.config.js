@@ -24,7 +24,7 @@ export default defineConfig({
     proxy: {
       // Proxy API requests to Django backend
       '/api': {
-        target: 'http://localhost:8000',
+        target: 'http://stha4us.github.io',
         changeOrigin: true,
         secure: false,
       },
