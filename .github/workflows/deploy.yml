@@ -36,16 +36,20 @@ jobs:
       - name: Build project
         run: npm run build
         env:
-          VITE_API_URL: ${{ secrets.VITE_API_URL || 'http://stha4us.github.io/api' }}
-          # PUBLIC_URL: /${{ github.event.repository.name }}
+          VITE_API_URL: ${{ secrets.VITE_API_URL || github.event.repository.name || 'http://stha4us.github.io/api' }}
+          # PUBLIC_URL: / github.event.repository.name }}
           # CI: false 
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4   
 
       # Upload static files for deployment
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           name: 'github-pages'
-          path: build
+          # path: build
+          path: ./dist
 
   deploy:
     needs: build
