@@ -38,9 +38,6 @@ const Header = () => {
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <div className="header-container">
         {/* Logo/Brand */}
-        <Link to="/" className="logo">
-          <span className="logo-text">Portfolio</span>
-        </Link>
 
         {/* Desktop Navigation */}
         <nav className="desktop-nav">

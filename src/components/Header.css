@@ -2,7 +2,7 @@
   position: sticky;
   top: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(225, 225, 225, 0.95);
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   z-index: 1000;
@@ -11,7 +11,7 @@
 
 .header.scrolled {
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-  background: rgba(255, 255, 255, 0.98);
+  background: rgba(235, 235, 235, 0.98);
 }
 
 .header-container {
@@ -47,7 +47,7 @@
 /* Desktop Navigation */
 .desktop-nav {
   display: flex;
-  gap: 0.5rem;
+  gap: 1.5rem;
   align-items: center;
   flex: 1;
   justify-content: center;
@@ -89,7 +89,7 @@
 /* Back Button */
 .back-button {
   padding: 0.6rem 1.2rem;
-  background: #007bff;
+  background: #686767f2;
   color: white;
   border: none;
   border-radius: 6px;

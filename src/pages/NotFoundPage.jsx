@@ -21,7 +21,10 @@ const NotFoundPage = () => {
         <div className="suggested-links">
           <p>You might be interested in:</p>
           <div className="links-grid">
-            <Link to="/data-ai">Data & AI Projects</Link>
+            <Link to="/data-ai">Data, AI & BI</Link>
+            <Link to="/electronics">Electronics Automation</Link>
+            <Link to="/interests">Shared Interests</Link>
+            <Link to="/community">Community Engagement</Link>
             <Link to="/professional">Professional Summary</Link>
             <Link to="/tips-tricks">Tips & Tricks</Link>
           </div>
