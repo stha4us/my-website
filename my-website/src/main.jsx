@@ -1,15 +1,18 @@
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import App from './App.jsx';
+import reportWebVitals from './reportWebVitals.jsx';
+import { BrowserRouter, HashRouter, Routes, Route } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 <HashRouter>
       <Routes>
         {/* Catch all routes and render App component */}
-        <Route path="*" element={<App />} />
+        <BrowserRouter>
+          <Route path="*" element={<App />} />
+        </BrowserRouter>
+        
       </Routes>
     </HashRouter>
 );

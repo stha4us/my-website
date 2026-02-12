@@ -1,0 +1,241 @@
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: rgba(225, 225, 225, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.header.scrolled {
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  background: rgba(235, 235, 235, 0.98);
+}
+
+.header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* Logo */
+.logo {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.logo:hover {
+  color: #007bff;
+}
+
+.logo-text {
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Desktop Navigation */
+.desktop-nav {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+}
+
+.desktop-nav a {
+  padding: 0.6rem 1rem;
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.3s;
+  white-space: nowrap;
+  position: relative;
+}
+
+.desktop-nav a:hover {
+  color: #007bff;
+  background: rgba(0, 123, 255, 0.05);
+}
+
+.desktop-nav a.active {
+  color: #007bff;
+  background: rgba(0, 123, 255, 0.1);
+}
+
+.desktop-nav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 2px;
+  background: #007bff;
+  border-radius: 2px;
+}
+
+/* Back Button */
+.back-button {
+  padding: 0.6rem 1.2rem;
+  background: #686767f2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.back-button:hover {
+  background: #0056b3;
+  transform: translateX(-2px);
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 25px;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #333;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  gap: 0;
+  background: white;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-nav.open {
+  max-height: 500px;
+}
+
+.mobile-nav a {
+  padding: 1rem 2rem;
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  border-bottom: 1px solid #f0f0f0;
+  transition: all 0.3s;
+}
+
+.mobile-nav a:hover,
+.mobile-nav a.active {
+  background: rgba(0, 123, 255, 0.05);
+  color: #007bff;
+  padding-left: 2.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .desktop-nav {
+    gap: 0.3rem;
+  }
+  
+  .desktop-nav a {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    padding: 1rem 1.5rem;
+  }
+
+  .desktop-nav,
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-menu-toggle,
+  .mobile-nav {
+    display: flex;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    padding: 0.8rem 1rem;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .header,
+  .desktop-nav a,
+  .mobile-nav,
+  .back-button,
+  .hamburger span {
+    transition: none;
+  }
+}
+
+/* Focus styles for accessibility */
+.desktop-nav a:focus-visible,
+.mobile-nav a:focus-visible,
+.back-button:focus-visible,
+.mobile-menu-toggle:focus-visible {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
