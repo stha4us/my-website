@@ -1,8 +1,8 @@
 import ProfileImage from '../components/ProfileImage';
 import CategoryButton from '../components/CategoryButton';
 import SocialLinks from '../components/SocialLinks';
-import { useState, useEffect } from 'react';
-import apiService from '../services/api';
+// import { useState, useEffect } from 'react';
+// import apiService from '../services/api';
 import { useNavigate } from 'react-router-dom';
 
 const HomePage = () => {
@@ -15,7 +15,7 @@ const HomePage = () => {
     'COMMUNITY ENGAGEMENT',
     'SHARED INTERESTS',
     'PROFESSIONAL SUMMARY',
-    'TIPS & TRICKS'
+    'LIFESTYLE & MOTIVATION'
   ];
   
   // useEffect(() => {
@@ -72,7 +72,7 @@ const HomePage = () => {
       'COMMUNITY ENGAGEMENT': '/community',
       'SHARED INTERESTS': '/interests',
       'PROFESSIONAL SUMMARY': '/professional',
-      'TIPS & TRICKS': '/tips-tricks'
+      'LIFESTYLE & MOTIVATION': '/lifestyle-motivation'
     };
     navigate(routeMap[category]);
   };

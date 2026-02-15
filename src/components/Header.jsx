@@ -42,7 +42,7 @@ const Header = () => {
         {/* Desktop Navigation */}
         <nav className="desktop-nav">
           <Link to="/" className={isHome ? 'active' : ''}>
-            Home
+            <i className="fa fa-home"></i> Home
           </Link>
           <Link to="/data-ai" className={location.pathname === '/data-ai' ? 'active' : ''}>
             Data & AI
@@ -59,13 +59,13 @@ const Header = () => {
           <Link to="/professional" className={location.pathname === '/professional' ? 'active' : ''}>
             Professional
           </Link>
-          <Link to="/tips-tricks" className={location.pathname === '/tips-tricks' ? 'active' : ''}>
-            Tips & Tricks
+          <Link to="/lifestyle-motivation" className={location.pathname === '/lifestyle-motivation' ? 'active' : ''}>
+            Lifestyle & Motivation
           </Link>
         </nav>
 
         {/* Back Button (for non-home pages) */}
-        {!isHome && (
+        {/* {!isHome && (
           <button 
             className="back-button desktop-only" 
             onClick={handleBackClick}
@@ -73,7 +73,7 @@ const Header = () => {
           >
             ← Back to Home
           </button>
-        )}
+        )} */}
 
         {/* Mobile Menu Toggle */}
         <button 
@@ -110,8 +110,8 @@ const Header = () => {
         <Link to="/professional" className={location.pathname === '/professional' ? 'active' : ''}>
           Professional
         </Link>
-        <Link to="/tips-tricks" className={location.pathname === '/tips-tricks' ? 'active' : ''}>
-          Tips & Tricks
+        <Link to="/lifestyle-motivation" className={location.pathname === '/lifestyle-motivation' ? 'active' : ''}>
+          Lifestyle & Motivation
         </Link>
       </nav>
     </header>

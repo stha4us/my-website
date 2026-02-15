@@ -29,6 +29,12 @@ const LifestyleMotivationPage = () => {
             </p>
           </div>
           <div className="expertise-card">
+            <h3>Removing price tags</h3>
+            <p>Simply head the price tag under a low flame. A candle or lighter will do the trick (but be careful with lighter).
+              The heat will loosen the adhesive, allowing you to peel off the tag easily without leaving residue behind.
+            </p>
+          </div>
+          <div className="expertise-card">
             <h3>More coming soon</h3>
             <p>...</p>
           </div>
@@ -36,14 +42,15 @@ const LifestyleMotivationPage = () => {
       </div>
       
       <div className="page-section">
-        <h2>Motivation</h2>
+        <h2>My Journey Learnings</h2>
         <div className="tech-tags">
-          <span className="tech-tag">To overcome procrastination beat your future self & do it now. </span>
           <span className="tech-tag">If you can do anything within next 5 min, do it now.</span>
+          <span className="tech-tag">There is no second change for first impression. </span>
           <span className="tech-tag">Schedule a calendar and routine, not a to do list.</span>
           <span className="tech-tag">Understanding problem is winning 1/2 of the battle.</span>
           <span className="tech-tag">Live in present before you treasure the moment in future.</span>
           <span className="tech-tag">Competition leads to dissatisfaction, responsibility leads to growth.</span>
+          <span className="tech-tag">To overcome procrastination beat your future self & do it now. </span>
         </div>
       </div>
     </div>
