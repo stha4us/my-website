@@ -26,7 +26,7 @@ const NotFoundPage = () => {
             <Link to="/interests">Shared Interests</Link>
             <Link to="/community">Community Engagement</Link>
             <Link to="/professional">Professional Summary</Link>
-            <Link to="/tips-tricks">Tips & Tricks</Link>
+            <Link to="/lifestyle-motivation">Lifestyle & Motivation</Link>
           </div>
         </div>
       </div>

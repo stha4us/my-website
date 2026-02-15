@@ -14,7 +14,7 @@ const ElectronicsPage = lazy(() => import('./pages/ElectronicsPage'));
 const CommunityPage = lazy(() => import('./pages/CommunityPage'));
 const InterestsPage = lazy(() => import('./pages/InterestsPage'));
 const ProfessionalPage = lazy(() => import('./pages/ProfessionalPage'));
-const TipsnTricksPage = lazy(() => import('./pages/Tips&TricksPage'));
+const LifestyleMotivationPage = lazy(() => import('./pages/Lifestyle&MotivationPage'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 
 // Main App Component
@@ -36,7 +36,7 @@ function App() {
               <Route path="/community" element={<CommunityPage />} />
               <Route path="/interests" element={<InterestsPage />} />
               <Route path="/professional" element={<ProfessionalPage />} />
-              <Route path="/tips-tricks" element={<TipsnTricksPage />} />
+              <Route path="/lifestyle-motivation" element={<LifestyleMotivationPage />} />
               
               {/* 404 Route */}
               <Route path="*" element={<NotFoundPage />} />
