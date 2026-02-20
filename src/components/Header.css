@@ -34,11 +34,11 @@
 }
 
 .logo:hover {
-  color: #007bff;
+  color: #3d3d3d;
 }
 
 .logo-text {
-  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  background: linear-gradient(135deg, #3d3d3d 0%, #0056b3 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -65,12 +65,12 @@
 }
 
 .desktop-nav a:hover {
-  color: #007bff;
+  color: #b8bcc0;
   background: rgba(0, 123, 255, 0.05);
 }
 
 .desktop-nav a.active {
-  color: #007bff;
+  color: #b8bcc0;
   background: rgba(0, 123, 255, 0.1);
 }
 
@@ -82,7 +82,7 @@
   transform: translateX(-50%);
   width: 30px;
   height: 2px;
-  background: #007bff;
+  background: #b8bcc0;
   border-radius: 2px;
 }
 
@@ -100,7 +100,7 @@
 }
 
 .back-button:hover {
-  background: #0056b3;
+  background: #b8bcc0;
   transform: translateX(-2px);
 }
 
@@ -174,7 +174,7 @@
 .mobile-nav a:hover,
 .mobile-nav a.active {
   background: rgba(0, 123, 255, 0.05);
-  color: #007bff;
+  color: #b8bcc0;
   padding-left: 2.5rem;
 }
 
@@ -236,6 +236,6 @@
 .mobile-nav a:focus-visible,
 .back-button:focus-visible,
 .mobile-menu-toggle:focus-visible {
-  outline: 2px solid #007bff;
+  outline: 2px solid #b8bcc0;
   outline-offset: 2px;
 }

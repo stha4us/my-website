@@ -35,6 +35,13 @@ const LifestyleMotivationPage = () => {
             </p>
           </div>
           <div className="expertise-card">
+            <h3>Whitening teeth instantly</h3>
+            <p>Take a pinch of salt and mix it with pinch of turmeric powder. Now add few drops of edible oil (mustard oil preffered) to make a paste.
+                Brush you teeth with this paste quickly all over. Now rinse your mouth with water and see the results.
+                Please make sure you use an old used toothbrush for this as turmeric can stain the toothbrush.
+            </p>
+          </div>
+          <div className="expertise-card">
             <h3>More coming soon</h3>
             <p>...</p>
           </div>
