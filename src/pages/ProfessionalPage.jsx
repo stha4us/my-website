@@ -9,10 +9,10 @@ const ProfessionalPage = () => {
       
       <div className="page-section">
         <p>
-          A data & analytics professional with over 8 years of experience in BI, ML, Data Analytics and forecasting industry. Grounded in 10+ years 
+          A data & analytics professional with over 8 years of experience in Data Engineering, BI, ML, Analytics and forecasting industry. Grounded in 10+ years 
           of professional experience in IT & tech world, I am passionate to explore endless opportunities in the data world, leveraging python, AI and 
-          modern data tools. I specialize in translating complex data into actionable insights, supporting data governance and security practices,
-          and building scalable, reliable data systems that enable informed data driven decision-making 
+          modern data stack. I specialize in translating complex data into actionable insights, supporting data governance and security practices,
+          and building scalable, reliable data systems that enable informed data driven decision-making.
           
         </p>
       </div>
@@ -35,7 +35,8 @@ const ProfessionalPage = () => {
           </div>
           <div className="expertise-card">
             <h3>Data Engineering</h3>
-            <p>Managing the data stores, maintaining and orchestrating end-to-end data pipeline.</p>
+            <p>Managing the data stores, maintaining and orchestrating end-to-end data pipeline. I specialize in building 
+              robust data infrastructure that supports scalable operational, analytics and machine learning workloads.</p>
           </div>
           <div className="expertise-card">
             <h3>Robotics and automation</h3>
@@ -56,14 +57,38 @@ const ProfessionalPage = () => {
                Creating and delivering educational content.
             </p>
           </div>
-          <div className="expertise-card">
-            <h3>Open Source Contributions</h3>
-            <p>Contributing to projects that benefit the wider tech community.
-              Guiding aspiring developers and tech enthusiasts in their journey
-              through mentorship.
-            </p>
-          </div>
-          
+        </div>
+      </div>
+
+      <div className="page-section">
+        <h2>Key Tech Domains</h2>
+        <div className="tech-tags">
+          <span className="tech-tag">Python</span>
+          <span className="tech-tag">Snowflake</span>
+          <span className="tech-tag">Power BI</span>
+          <span className="tech-tag">Azure Cloud</span>
+          <span className="tech-tag">DBT</span>
+          <span className="tech-tag">SQL</span>
+          <span className="tech-tag">Databricks</span>
+          <span className="tech-tag">MongoDB</span>
+          <span className="tech-tag">Neo4j</span>
+          <span className="tech-tag">Databricks</span>
+          <span className="tech-tag">Sparks</span>
+          <span className="tech-tag">Airflow</span>
+          <span className="tech-tag">Kafka</span>
+          <span className="tech-tag">Docker</span>
+          <span className="tech-tag">Tensorflow</span>
+          <span className="tech-tag">BigQuery</span>
+          <span className="tech-tag">Git</span>
+          <span className="tech-tag">Azure DevOps</span>
+          <span className="tech-tag">Github Actions</span>
+          <span className="tech-tag">Power Apps</span>
+          <span className="tech-tag">AWS Cloud</span>
+          <span className="tech-tag">Synapse Analytics</span>
+          <span className="tech-tag">3D Printing</span>
+          <span className="tech-tag">Arduino</span>
+          <span className="tech-tag">Raspberry Pi</span>
+          <span className="tech-tag">ESP32</span>
         </div>
       </div>
 
@@ -79,29 +104,6 @@ const ProfessionalPage = () => {
             <i className={link.icon}></i> Request Resume
           </a>
         ))}
-      </div>
-      
-      <div className="page-section">
-        <h2>Key Domains</h2>
-        <div className="tech-tags">
-          <span className="tech-tag">Python</span>
-          <span className="tech-tag">TensorFlow</span>
-          <span className="tech-tag">Power BI</span>
-          <span className="tech-tag">Tableau</span>
-          <span className="tech-tag">DBT</span>
-          <span className="tech-tag">SQL</span>
-          <span className="tech-tag">Databricks</span>
-          <span className="tech-tag">Sparks</span>
-          <span className="tech-tag">Kafka</span>
-          <span className="tech-tag">Docker</span>
-          <span className="tech-tag">Snowflake</span>
-          <span className="tech-tag">BigQuery</span>
-          <span className="tech-tag">3D-Printing</span>
-          <span className="tech-tag">Arduino</span>
-          <span className="tech-tag">Raspberry-Pi</span>
-          <span className="tech-tag">Power-Apps</span>
-          <span className="tech-tag">AWS Cloud</span>
-        </div>
       </div>
     </div>
   );

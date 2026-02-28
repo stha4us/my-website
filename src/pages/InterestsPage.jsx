@@ -20,7 +20,6 @@ const InterestsPage = () => {
           about continuous learning, creativity, enjoying and building meaningful connections.
         </p>
       </div>
-
       <div className="page-section">
         <h2>Core Interests</h2>
         <div className="expertise-grid">
@@ -51,7 +50,7 @@ const InterestsPage = () => {
         </div>
       </div>
 
-      <div className="page-section">
+      <div className="page-section width-100% !important">
         <h2>Beyond </h2>
         <p>
           When not working, I enjoy gaming, self care, reading philosophical content, and exploring nature. 
