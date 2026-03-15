@@ -1,22 +1,23 @@
 import ProfileImage from '../components/ProfileImage';
-import CategoryButton from '../components/CategoryButton';
+// import CategoryButton from '../components/CategoryButton';
 import SocialLinks from '../components/SocialLinks';
 // import { useState, useEffect } from 'react';
 // import apiService from '../services/api';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 
 const HomePage = () => {
   // const [sections, setSections] = useState([]);
-  const navigate = useNavigate();
 
-  const categories = [
-    'DATA, AI & BI',
-    'ELECTRONICS AUTOMATION',
-    'COMMUNITY ENGAGEMENT',
-    'SHARED INTERESTS',
-    'PROFESSIONAL SUMMARY',
-    'LIFESTYLE & MOTIVATION'
-  ];
+  // const navigate = useNavigate();
+
+  // const categories = [
+  //   'DATA, AI & BI',
+  //   'ELECTRONICS AUTOMATION',
+  //   'COMMUNITY ENGAGEMENT',
+  //   'SHARED INTERESTS',
+  //   'PROFESSIONAL SUMMARY',
+  //   'LIFESTYLE & MOTIVATION'
+  // ];
   
   // useEffect(() => {
   //   const fetchData = async () => {
@@ -65,17 +66,17 @@ const HomePage = () => {
   //   );
   // }
 
-  const handleCategorySelect = (category) => {
-    const routeMap = {
-      'DATA, AI & BI': '/data-ai',
-      'ELECTRONICS AUTOMATION': '/electronics',
-      'COMMUNITY ENGAGEMENT': '/community',
-      'SHARED INTERESTS': '/interests',
-      'PROFESSIONAL SUMMARY': '/professional',
-      'LIFESTYLE & MOTIVATION': '/lifestyle-motivation'
-    };
-    navigate(routeMap[category]);
-  };
+  // const handleCategorySelect = (category) => {
+  //   const routeMap = {
+  //     'DATA, AI & BI': '/data-ai-bi',
+  //     'ELECTRONICS AUTOMATION': '/electronics',
+  //     'COMMUNITY ENGAGEMENT': '/community',
+  //     'SHARED INTERESTS': '/interests',
+  //     'PROFESSIONAL SUMMARY': '/professional',
+  //     'LIFESTYLE & MOTIVATION': '/lifestyle-motivation'
+  //   };
+  //   navigate(routeMap[category]);
+  // };
 
   return (
   <div className="content-grid">

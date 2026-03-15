@@ -31,11 +31,11 @@ function App() {
               <Route path="/" element={<HomePage />} />
               
               {/* Section Routes */}
-              <Route path="/data-ai" element={<DataAIPage />} />
-              <Route path="/electronics" element={<ElectronicsPage />} />
-              <Route path="/community" element={<CommunityPage />} />
-              <Route path="/interests" element={<InterestsPage />} />
-              <Route path="/professional" element={<ProfessionalPage />} />
+              <Route path="/data-ai-bi" element={<DataAIPage />} />
+              <Route path="/electronics-automation" element={<ElectronicsPage />} />
+              <Route path="/community-engagement" element={<CommunityPage />} />
+              <Route path="/shared-interests" element={<InterestsPage />} />
+              <Route path="/professional-summary" element={<ProfessionalPage />} />
               <Route path="/lifestyle-motivation" element={<LifestyleMotivationPage />} />
               
               {/* 404 Route */}
