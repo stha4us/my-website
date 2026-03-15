@@ -7,6 +7,12 @@ const Header = () => {
   const navigate = useNavigate();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  function convertToTitleCase(str) {
+    return str.toLowerCase().split(' ').map(function(word) {
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    }).join(' ');
+  }
   
   const isHome = location.pathname === '/';
 
@@ -26,13 +32,35 @@ const Header = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [location.pathname]);
 
-  const handleBackClick = () => {
-    navigate('/');
-  };
+  // const handleBackClick = () => {
+  //   navigate('/');
+  // };
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
+
+  const handleCategorySelect = (category) => {
+    const routeMap = {
+      'DATA, AI & BI': '/data-ai-bi',
+      'ELECTRONICS AUTOMATION': '/electronics-automation',
+      'COMMUNITY ENGAGEMENT': '/community-engagement',
+      'SHARED INTERESTS': '/shared-interests',
+      'PROFESSIONAL SUMMARY': '/professional-summary',
+      'LIFESTYLE & MOTIVATION': '/lifestyle-motivation'
+    };
+    navigate(routeMap[category]);
+  };
+
+   const categories = [
+    'DATA, AI & BI',
+    'ELECTRONICS AUTOMATION',
+    'COMMUNITY ENGAGEMENT',
+    'SHARED INTERESTS',
+    'PROFESSIONAL SUMMARY',
+    'LIFESTYLE & MOTIVATION'
+  ];
+
 
   return (
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
@@ -40,11 +68,22 @@ const Header = () => {
         {/* Logo/Brand */}
 
         {/* Desktop Navigation */}
+
         <nav className="desktop-nav">
           <Link to="/" className={isHome ? 'active' : ''}>
             <i className="fa fa-home"></i> Home
           </Link>
-          <Link to="/data-ai" className={location.pathname === '/data-ai' ? 'active' : ''}>
+          {categories.map((category, index) => (
+          <Link to={`/${category.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-').replace(',', '')}`}
+          className={location.pathname === `/${category.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-').replace(',', '')}`
+          ? 'active' : ''}
+            key={index}
+            onSelect={handleCategorySelect}
+          >
+            {convertToTitleCase(category)}
+          </Link>
+        ))}
+          {/* <Link to="/data-ai" className={location.pathname === '/data-ai' ? 'active' : ''}>
             Data & AI
           </Link>
           <Link to="/electronics" className={location.pathname === '/electronics' ? 'active' : ''}>
@@ -61,7 +100,7 @@ const Header = () => {
           </Link>
           <Link to="/lifestyle-motivation" className={location.pathname === '/lifestyle-motivation' ? 'active' : ''}>
             Lifestyle & Motivation
-          </Link>
+          </Link> */}
         </nav>
 
         {/* Back Button (for non-home pages) */}
@@ -95,7 +134,17 @@ const Header = () => {
         <Link to="/" className={isHome ? 'active' : ''}>
           Home
         </Link>
-        <Link to="/data-ai" className={location.pathname === '/data-ai' ? 'active' : ''}>
+        {categories.map((category, index) => (
+          <Link to={`/${category.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-').replace(',', '')}`}
+          className={location.pathname === `/${category.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-').replace(',', '')}`
+          ? 'active' : ''}
+            key={index}
+            onSelect={handleCategorySelect}
+          >
+            {convertToTitleCase(category)}
+          </Link>
+        ))}
+        {/* <Link to="/data-ai" className={location.pathname === '/data-ai' ? 'active' : ''}>
           Data & AI
         </Link>
         <Link to="/electronics" className={location.pathname === '/electronics' ? 'active' : ''}>
@@ -112,7 +161,7 @@ const Header = () => {
         </Link>
         <Link to="/lifestyle-motivation" className={location.pathname === '/lifestyle-motivation' ? 'active' : ''}>
           Lifestyle & Motivation
-        </Link>
+        </Link> */}
       </nav>
     </header>
   );
