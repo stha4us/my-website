@@ -9,11 +9,14 @@ const ProfessionalPage = () => {
       
       <div className="page-section">
         <p>
-          A data & analytics professional with over 8 years of experience in Data Engineering, BI, ML, Analytics and forecasting industry. Grounded in 10+ years 
-          of professional experience in IT & tech world, I am passionate to explore endless opportunities in the data world, leveraging python, AI and 
-          modern data stack. I specialize in translating complex data into actionable insights, supporting data governance and security practices,
-          and building scalable, reliable data systems that enable informed data driven decision-making.
-          
+          A strategic data professional with 10+ years of experience in tech and innovation, including
+          over 8 years delivering scalable data platforms, cloud-native pipelines and advanced analytics
+          solutions across insurance, auto club, retail & digital distribution, healthcare and public
+          sector. Strong expertise in dimensional modelling, ELT/ETL frameworks, data warehousing,
+          data governance and MLOPs pipeline. I specialize in building and optimising modern data
+          architectures using python, AI and modern data stack to deliver secure, high performance
+          and scalable data solutions that drive business value and enable impactful data-driven
+          business decisions. 
         </p>
       </div>
 

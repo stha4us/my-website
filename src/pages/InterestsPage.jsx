@@ -2,13 +2,12 @@
 const InterestsPage = () => {
   return (
     <div className="page-with-image">
-      <div className="page-image-section">
+      <div className="page-image-and-interest">
         <img 
         src="https://raw.githubusercontent.com/stha4us/my-website/main/assets/file_team_posture.png" 
         alt="Profile" 
         className="page-profile-image"
         />
-      </div>
       
       <div className="page-text-section">
       <h1 className="page-title">Shared Interests</h1>
@@ -29,7 +28,7 @@ const InterestsPage = () => {
           </div>
           <div className="expertise-card">
             <h3>Pets, Wildlifes & Nature</h3>
-            <p>Explore the vast wilderness of nature and pets that are not too aggresive! </p>
+            <p>Explore the vast wilderness of nature and not too aggresive pets! </p>
           </div>
           <div className="expertise-card">
             <h3>Continuous Learning</h3>
@@ -37,11 +36,11 @@ const InterestsPage = () => {
           </div>
           <div className="expertise-card">
             <h3>Gaming and Sports</h3>
-            <p>Enjoying creativity and enhusiasm of people. Experience more of Pokemon, COC, Marvels COC, Cricket, Fifa, Super Mario </p>
+            <p>I enjoy creativity of people. Pokemon GO, COC, Marvels COC, Cricket, EA Sports FC. </p>
           </div>
           <div className="expertise-card">
             <h3>Self care</h3>
-            <p> Enjoy pushing limits to get better in shape. To add on light workouts, cardios, running, walking, meditation, yoga and stretching.</p>
+            <p> Getting fitter with light workouts, cardios, meditation, yoga and stretching.</p>
           </div>
           <div className="expertise-card">
             <h3>Animie(s) and Sci-Fi</h3>
@@ -50,14 +49,17 @@ const InterestsPage = () => {
         </div>
       </div>
 
-      <div className="page-section width-100% !important">
+      
+    </div>
+      </div>
+      
+    <div className="page-section">
         <h2>Beyond </h2>
         <p>
           When not working, I enjoy gaming, self care, reading philosophical content, and exploring nature. 
-          Always open to conversations about life, universe, and everything!
+          Always open to conversations about life, universe, and evolving technology.
         </p>
       </div>
-    </div>
   </div>
   );
 };
