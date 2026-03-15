@@ -85,11 +85,7 @@ const HomePage = () => {
         Hello,<br />I am Utsab
       </h1>
 
-      <p className="tagline">
-        Let's explore for endless opportunities awaiting us!
-      </p>
-
-      <div className="button-group">
+      {/* <div className="button-group">
         {categories.map((category, index) => (
           <CategoryButton
             key={index}
@@ -97,7 +93,20 @@ const HomePage = () => {
             onSelect={handleCategorySelect}
           />
         ))}
-      </div>
+      </div> */}
+      <div className="description-home">
+          An introvert guy who seems antisocial but actually likes meeting people, exploring communities and expanding the circle. I listen, admire and take a moment before speaking; have 
+          some patience and surely you won't regret it. 
+          <br></br>
+          <br></br>
+          A data & analytics professional with over 8 years of experience in Data Engineering, Business Intelligence, Machine Learning, analytics and forecasting. Grounded in 10+ years 
+          of professional experience in IT & tech innovation, I am passionate to explore endless opportunities in the data world, leveraging python, AI and 
+          modern data stack. I specialize in translating complex data into actionable insights, supporting data governance and security practices,
+          and building scalable, reliable data systems that enable informed data driven decision-making. 
+        </div>
+      <p className="tagline">
+        Let's explore for endless opportunities awaiting us!
+      </p>
       <SocialLinks />
     </div>
   </div>
