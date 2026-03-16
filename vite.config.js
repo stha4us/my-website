@@ -17,26 +17,22 @@ export default defineConfig({
     },
   },
 
-  base: '/stha4us.github.io/',
-
-  server: {
-    historyApiFallback: true,
-  }
+  base: '/',
 
   // Server configuration
-  // server: {
-  //   port: 3000,
-  //   open: true,
-  //   historyApiFallback: true,
-  //   proxy: {
-  //     // Proxy API requests to Django backend
-  //     '/api': {
-  //       target: 'http://stha4us.github.io',
-  //       changeOrigin: true,
-  //       secure: false,
-  //     },
-  //   },
-  // },
+  server: {
+    port: 3000,
+    open: true,
+    historyApiFallback: true,
+    proxy: {
+      // Proxy API requests to Django backend
+      '/api': {
+        target: 'http://stha4us.github.io',
+        changeOrigin: true,
+        secure: false,
+      },
+    },
+  },
 
   // Build configuration
   build: {
