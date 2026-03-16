@@ -1,10 +1,12 @@
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation
+  // , useNavigate 
+} from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import './Header.css';
 
 const Header = () => {
   const location = useLocation();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -40,17 +42,17 @@ const Header = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
-  const handleCategorySelect = (category) => {
-    const routeMap = {
-      'DATA, AI & BI': '/data-ai-bi',
-      'ELECTRONICS AUTOMATION': '/electronics-automation',
-      'COMMUNITY ENGAGEMENT': '/community-engagement',
-      'SHARED INTERESTS': '/shared-interests',
-      'PROFESSIONAL SUMMARY': '/professional-summary',
-      'LIFESTYLE & MOTIVATION': '/lifestyle-motivation'
-    };
-    navigate(routeMap[category]);
-  };
+  // const handleCategorySelect = (category) => {
+  //   const routeMap = {
+  //     'DATA, AI & BI': '/data-ai-bi',
+  //     'ELECTRONICS AUTOMATION': '/electronics-automation',
+  //     'COMMUNITY ENGAGEMENT': '/community-engagement',
+  //     'SHARED INTERESTS': '/shared-interests',
+  //     'PROFESSIONAL SUMMARY': '/professional-summary',
+  //     'LIFESTYLE & MOTIVATION': '/lifestyle-motivation'
+  //   };
+  //   navigate(routeMap[category]);
+  // };
 
    const categories = [
     'DATA, AI & BI',
@@ -60,6 +62,9 @@ const Header = () => {
     'PROFESSIONAL SUMMARY',
     'LIFESTYLE & MOTIVATION'
   ];
+
+  const toPath = (category) =>
+    `/${category.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-').replace(',', '')}`;
 
 
   return (
@@ -74,11 +79,12 @@ const Header = () => {
             <i className="fa fa-home"></i> Home
           </Link>
           {categories.map((category, index) => (
-          <Link to={`/${category.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-').replace(',', '')}`}
-          className={location.pathname === `/${category.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-').replace(',', '')}`
-          ? 'active' : ''}
+          <Link to={toPath(category)}
+            className={location.pathname === toPath(category)
+            ? 'active' : ''}
             key={index}
-            onSelect={handleCategorySelect}
+            // onSelect={handleCategorySelect}
+            // onClick={() => onSelect(category)}
           >
             {convertToTitleCase(category)}
           </Link>
@@ -135,11 +141,11 @@ const Header = () => {
           Home
         </Link>
         {categories.map((category, index) => (
-          <Link to={`/${category.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-').replace(',', '')}`}
-          className={location.pathname === `/${category.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-').replace(',', '')}`
+          <Link to={toPath(category)}
+          className={location.pathname === toPath(category)
           ? 'active' : ''}
             key={index}
-            onSelect={handleCategorySelect}
+            // onSelect={handleCategorySelect}
           >
             {convertToTitleCase(category)}
           </Link>
