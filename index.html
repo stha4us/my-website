@@ -15,7 +15,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    
+  <script>
+    const redirect = new URLSearchParams(window.location.search).get('redirect');
+    if (redirect) {
+      // Replace the URL cleanly without the ?redirect= param
+      window.history.replaceState(null, '', redirect);
+    }
+  </script>
   </head>
   <body>
     <noscript>Javascript powered app.</noscript>

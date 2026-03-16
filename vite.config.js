@@ -17,6 +17,8 @@ export default defineConfig({
     },
   },
 
+  base: '/stha4us.github.io/',
+
   // Server configuration
   server: {
     port: 3000,
