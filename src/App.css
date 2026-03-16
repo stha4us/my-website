@@ -349,13 +349,33 @@
   flex-wrap: wrap;
 }
 
+.page-section-wo-photo {
+  background-color: white;
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 32px;
+}
+
 .page-section h2 {
   font-size: 2rem;
   color: #1f2937;
   margin-bottom: 16px;
 }
 
+.page-section-wo-photo h2 {
+  font-size: 2rem;
+  color: #1f2937;
+  margin-bottom: 16px;
+}
+
 .page-section p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #374151;
+}
+
+.page-section-wo-photo p {
   font-size: 1.125rem;
   line-height: 1.8;
   color: #374151;
@@ -448,7 +468,15 @@
     padding: 20px;
   }
 
+  .page-section-wo-photo {
+    padding: 20px;
+  }
+
   .page-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .page-section-wo-photo h2 {
     font-size: 1.5rem;
   }
 

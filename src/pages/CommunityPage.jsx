@@ -13,7 +13,7 @@ const CommunityPage = () => {
         </p>
       </div>
 
-      <div className="page-section">
+      <div className="page-section-wo-photo">
         <h2>Activities</h2>
         <div className="expertise-grid">
           <div className="expertise-card">
@@ -35,8 +35,9 @@ const CommunityPage = () => {
         </div>
       </div>
 
-      <div className="page-section">
+      <div className="page-section-wo-photo">
         <h2>Get Involved</h2>
+        <br></br>
         <p>
           Interested in collaborating or joining community events? 
           Reach out through social media or email to stay connected!
