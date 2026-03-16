@@ -14,7 +14,7 @@ root.render(
   <React.StrictMode>
     {/* <HashRouter> */}
         {/* Catch all routes and render App component */}
-        <BrowserRouter>
+        <BrowserRouter basename = "/stha4us.github.io/">
           {/* <Route path="*" element={<App />} /> */}
           <App />
         </BrowserRouter>

@@ -2,11 +2,14 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Redirecting...</title>
+  <!-- <title>Redirecting...</title> -->
   <script>
-    sessionStorage.redirect = location.href;
+    // sessionStorage.redirect = location.href;
+    const path = window.location.pathname;
+    const search = window.location.search;
+    window.location.replace('/?redirect=' + encodeURIComponent(path + search));
   </script>
-  <meta http-equiv="refresh" content="0;URL='/'"></meta>
+  <!-- <meta http-equiv="refresh" content="0;URL='/'"></meta> -->
 </head>
 <body>Under maintenance, please revisit later. </body>
 </html>
