@@ -96,11 +96,11 @@ const HomePage = () => {
         ))}
       </div> */}
       <div className="description-home">
-          An introvert guy who seems antisocial but actually likes meeting people, exploring communities and expanding the circle. I listen, admire and take a moment before speaking; have 
-          some patience and surely you won't regret it. 
+          An introvert guy who likes meeting people, exploring communities and expanding the circle :). I listen, admire and sometimestake a moment before speaking; so please have 
+          some patience and you won't regret it. I like good food, pets, tech talks and fitness alongside sustainable living.
           <br></br>
           <br></br>
-          A data & analytics professional with over 8 years of experience in Data Engineering, Business Intelligence, Machine Learning, analytics and forecasting. Grounded in 10+ years 
+          Prefessionally I am a data & analytics professional with over 8 years of experience in Data Engineering, Business Intelligence, Machine Learning, analytics and forecasting. Grounded in 10+ years 
           of professional experience in IT & tech innovation, I am passionate to explore endless opportunities in the data world, leveraging python, AI and 
           modern data stack. I specialize in translating complex data into actionable insights, supporting data governance and security practices,
           and building scalable, reliable data systems that enable informed data driven decision-making. 
