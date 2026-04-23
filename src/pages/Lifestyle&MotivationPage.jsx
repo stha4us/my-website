@@ -42,10 +42,6 @@ const LifestyleMotivationPage = () => {
                 Please make sure you use an old used toothbrush for this as turmeric can stain the toothbrush.
             </p>
           </div>
-          <div className="expertise-card">
-            <h3>More coming soon</h3>
-            <p>...</p>
-          </div>
         </div>
       </div>
       
@@ -59,6 +55,8 @@ const LifestyleMotivationPage = () => {
           <span className="tech-tag">Live in present before you treasure the moment in future.</span>
           <span className="tech-tag">Competition leads to dissatisfaction, responsibility leads to growth.</span>
           <span className="tech-tag">To overcome procrastination beat your future self & do it now. </span>
+          <span className="tech-tag"> There exists an entity that gives you hope when you when you lose it all - I call it God,
+            others call it luck & some call it willpower. </span>
         </div>
       </div>
     </div>
