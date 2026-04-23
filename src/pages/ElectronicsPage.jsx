@@ -10,6 +10,7 @@ const ElectronicsPage = () => {
           Electronics automation incorporates designing intelligent automation systems for modern industrial, 
           commercial, and home applications implementing principles of electronics engineering. It helps to 
           bridge the gap between physical and digital worlds through innovative IoT solutions and smart systems.
+          Personally, I see it as the next breakthrough, after AI innovations, that can revolutionize the way we live and work.
         </p>
       </div>
 
@@ -17,7 +18,7 @@ const ElectronicsPage = () => {
         <h2>Major Domains</h2>
         <div className="expertise-grid">
           <div className="expertise-card">
-            <h3>IoT Device Integration</h3>
+            <h3>IoT Integration</h3>
             <p>Connecting devices and sensors to create seamless smart ecosystems.</p>
           </div>
           <div className="expertise-card">
