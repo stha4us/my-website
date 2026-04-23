@@ -8,9 +8,9 @@ const DataAIPage = () => {
         <h2>Overview</h2>
         <p>
           We are drowning into data and starving for information more and more. Hence, the significance of Business Intelligence(BI) 
-          and Artificial Intelligence(AI) is rising. Transforming raw data into actionable insights and making decisions/predictions out 
-          of it requires cutting-edge AI and BI tools. Specialization in building intelligent systems that drive business decisions 
-          and unlocking the power of data-driven strategies is the demand of modern industry.
+          and Artificial Intelligence(AI) is rising. AI/BI tools have never looked so promising in transforming raw data into actionable insights and decision making as it is today. 
+          Specialization in building intelligent systems that drive business decisions 
+          and unlocking the power of data-driven strategies is the demand of modern industry in every domain.
         </p>
       </div>
 

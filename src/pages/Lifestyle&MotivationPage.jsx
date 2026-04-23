@@ -6,7 +6,8 @@ const LifestyleMotivationPage = () => {
       
       <div className="page-section">
         <p>
-          Here are some possibly useful information, that could be useful at some point in the future.
+          Some of the possibly useful information, that could be useful at some point in life. All the findings are based on my personal
+          expreience and research. I am not a certified expert in any of these domains, but I am sharing what I have found useful in my life.
         </p>
       </div>
 
