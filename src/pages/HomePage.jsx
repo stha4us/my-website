@@ -6,6 +6,14 @@ import SocialLinks from '../components/SocialLinks';
 // import { useNavigate } from 'react-router-dom';
 
 const HomePage = () => {
+  const startDate = new Date('2018-06-01');
+  const currentDate = new Date();
+
+  // Calculate difference in milliseconds, then convert to days
+  const diffTime = Math.abs(currentDate - startDate);
+  const dataExperienceYears = Math.floor(diffTime / (1000 * 60 * 60 * 24)/365);
+  const workExperienceYears = dataExperienceYears + 2;
+
   // const [sections, setSections] = useState([]);
 
   // const navigate = useNavigate();
@@ -96,7 +104,7 @@ const HomePage = () => {
         ))}
       </div> */}
       <div className="description-home">
-          A data & analytics professional with over 8 years of experience in Data Engineering, Business Intelligence, Machine Learning, Analytics and Forecasting. Grounded in 10+ years 
+          A data & analytics professional with over {dataExperienceYears} years of experience in Data Engineering, Business Intelligence, Machine Learning, Analytics and Forecasting. Grounded in 10+ years 
           of experience in IT & tech innovation, I am passionate to explore endless opportunities in the data world, leveraging python, AI and 
           modern data stack. I specialize in translating complex data into actionable insights, supporting data governance and security practices,
           and building scalable, reliable data systems that enable informed data driven decision-making.

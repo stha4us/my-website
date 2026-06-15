@@ -3,14 +3,21 @@ const ProfessionalPage = () => {
   const resumeLink = [
       { icon: 'fab fa-google-drive', url: 'https://docs.google.com/document/d/1hVlw-LCBRRiyOPoszCMa_kKiUOD12ScC-CvNVR-jkAs/edit?tab=t.0', label: 'Google' }
       ];
+      const startDate = new Date('2018-06-01');
+      const currentDate = new Date();
+
+      // Calculate difference in milliseconds, then convert to days
+      const diffTime = Math.abs(currentDate - startDate);
+      const dataExperienceYears = Math.floor(diffTime / (1000 * 60 * 60 * 24)/365);
+      const workExperienceYears = dataExperienceYears + 2;
   return (
     <div className="page-content">
       <h1 className="page-title">Professional Summary</h1>
       
       <div className="page-section">
         <p>
-          A strategic data professional with 10+ years of experience in tech and innovation, including
-          over 8 years delivering scalable data platforms, cloud-native pipelines and advanced analytics
+          A strategic data professional with {workExperienceYears}+ years of experience in tech and innovation, including
+          over {dataExperienceYears} years delivering scalable data platforms, cloud-native pipelines and advanced analytics
           solutions across insurance, auto club, retail & digital distribution, healthcare and public
           sector. Strong expertise in dimensional modelling, ELT/ETL frameworks, data warehousing,
           data governance and MLOPs pipeline. I specialize in building and optimising modern data
