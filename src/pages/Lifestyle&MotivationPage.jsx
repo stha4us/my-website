@@ -6,8 +6,8 @@ const LifestyleMotivationPage = () => {
       
       <div className="page-section">
         <p>
-          Some of the possibly useful information, that could be useful at some point in life. All the findings are based on my personal
-          expreience and research. I am not a certified expert in any of these domains, but I am sharing what I have found useful in my life.
+          Here are possibly useful information, that could be useful at some point in life. All the findings are based on my personal
+          experience and research. I am not a certified expert in any of these domains, but I am sharing what I have found useful in my life.
         </p>
       </div>
 
@@ -64,6 +64,7 @@ const LifestyleMotivationPage = () => {
           <span className="tech-tag">There exists an entity that gives you hope when you when you lose it all - I call it God,
             others call it luck & some call it willpower. </span>
           <span className="tech-tag">If your goal seems impossible to world, keep it within yourself and work for it.</span>
+          <span className="tech-tag">Train like you never won, perform like you never lost.</span>
         </div>
       </div>
     </div>

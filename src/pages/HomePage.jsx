@@ -110,7 +110,7 @@ const HomePage = () => {
           and building scalable, reliable data systems that enable informed data driven decision-making.
           <br></br>
           <br></br>
-          Trust me, I am an introvert guy who likes meeting people, exploring communities and expanding my circle &#128512;. I listen, admire and take a moment before expressing, so please have 
+          I am an introvert guy who likes meeting people, exploring communities and expanding my circle, trust me &#128512;. I listen, admire and may take a moment before expressing, so please have 
           some patience and you won't regret it. I like good food, pets, tech talks, philosophy and fitness activities alongside sustainable living.
         </div>
       <p className="tagline">
