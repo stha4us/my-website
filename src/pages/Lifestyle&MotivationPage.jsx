@@ -1,5 +1,51 @@
+import { useApiCache } from '../hooks/useApiCache';
+
+export default function LifestyleMotivationPage() {
 // LIFESTYLE & MOTIVATION PAGE
-const LifestyleMotivationPage = () => {
+  const { data: lifestyleOverviews, loading, error, refresh, isSlowLoad } = useApiCache('/api/section-key-values/');
+  
+  // Filter for only enabled home page content
+  const lifestyleContent = lifestyleOverviews
+    ?.filter(item => 
+      item.page_overview.page === "lifestyle & motivation" && 
+      item.page_overview.section === "journey learnings" && 
+      item.enabled)
+    ?? [];
+
+  const lifestyleTricks = lifestyleOverviews
+    ?.filter(item => 
+      item.page_overview.page === "lifestyle & motivation" && 
+      item.page_overview.section === "lifestyle tricks" && 
+      item.enabled)
+    ?? [];
+
+  // ── Loading state ─────────────────────────────────────────────
+  if (loading) {
+  return (
+    <div className="home-page">
+      {isSlowLoad && (
+        <p className="slow-load-notice">
+          ⏳ Backend is waking up, this may take up to 60 seconds on first load…
+        </p>
+      )}
+      <div className="loading-skeleton">Loading...</div>
+    </div>
+  );
+}
+
+  // ── Error state ───────────────────────────────────────────────
+  if (error) {
+    return (
+      <div className="home-page">
+        <div className="error-state">
+          <p>Could not load page content.</p>
+          <button onClick={refresh}>Try again</button>
+        </div>
+      </div>
+    );
+  }
+
+  // ── Render ────────────────────────────────────────────────────
   return (
     <div className="page-content">
       <h1 className="page-title">Lifestyle & Motivation</h1>
@@ -13,6 +59,27 @@ const LifestyleMotivationPage = () => {
 
       <div className="page-section">
         <h2>Lifestyle Tricks</h2>
+
+        <div className="expertise-grid">
+          {lifestyleTricks.flatMap(item =>
+            (item.data?.["tips&tricks"] ?? []).map((trick, index) => {
+              const [title, description] = Object.entries(trick)[0] || [];
+
+              return (
+                <div className="expertise-card" key={`${item.id}-${index}`}>
+                  <h3>{title}</h3>
+                  <p>{description}</p>
+                </div>
+              );
+            })
+          )}
+        </div>
+
+
+        {/* I want a script here taking data from API*/}
+
+          {/* Replace this block  */}
+        {/* <h2>Lifestyle Tricks</h2>
         <div className="expertise-grid">
           <div className="expertise-card">
             <h3>Folding T-shirts</h3>
@@ -49,26 +116,47 @@ const LifestyleMotivationPage = () => {
             </p>
           </div>
         </div>
+       */}
+      {/* Until here Replace this block  */}
       </div>
       
       <div className="page-section">
         <h2>My Journey Learnings</h2>
+
         <div className="tech-tags">
-          <span className="tech-tag">If you can do anything within next 5 min, do it now.</span>
-          <span className="tech-tag">There is no second change for first impression. </span>
-          <span className="tech-tag">Schedule a calendar and routine, not a to do list.</span>
-          <span className="tech-tag">Understanding problem is winning 1/2 of the battle.</span>
-          <span className="tech-tag">Live in present before you treasure the moment in future.</span>
-          <span className="tech-tag">Competition leads to dissatisfaction, responsibility leads to growth.</span>
-          <span className="tech-tag">To overcome procrastination beat your future self & do it now. </span>
-          <span className="tech-tag">There exists an entity that gives you hope when you when you lose it all - I call it God,
-            others call it luck & some call it willpower. </span>
-          <span className="tech-tag">If your goal seems impossible to world, keep it within yourself and work for it.</span>
-          <span className="tech-tag">Train like you never won, perform like you never lost.</span>
+          {
+          // lifestyleContent.map(item => 
+          // (
+          //   <section key={item.id}> {/*className={`home-section home-section--${item.page_overview.section}`} */}
+          //     {/* <p>{item.data.motivation}</p> */}
+          //     {
+          //       <div className="extra-fields">
+          //         {Object.entries(item.data).map(([key, value]) => (
+          //           <div key={key} className="extra-field">
+          //             {/* <span className="extra-field__key">{key}:</span> */}
+          //             {/* <span className="extra-field__value">{String(value)}</span> */}
+          //             <ul>
+          //               {value.map((motivation, index) => (
+          //                 <span className="tech-tag">{motivation}<br/></span>
+          //                 // <li key={index}>{motivation}</li> 
+          //               ))}
+          //             </ul>
+          //           </div>
+          //         ))}
+          //       {/* </div> */}
+          //     }
+          //   </section>
+          //   ))
+          lifestyleContent.map(item =>
+            item.data.motivation.map((motivation, index) => (
+              <span key={`${item.id}-${index}`} className="tech-tag">
+                {motivation}
+              </span>
+            ))
+          )
+            }
         </div>
-      </div>
+      </div> 
     </div>
   );
-};
-
-export default LifestyleMotivationPage;
+}

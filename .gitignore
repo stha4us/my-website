@@ -22,6 +22,7 @@ dist-ssr
 .env.test.local
 .env.production.local
 .vscode
+.env
 
 # Logs
 logs
