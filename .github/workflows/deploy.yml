@@ -36,7 +36,8 @@ jobs:
       - name: Build project
         run: npm run build
         env:
-          VITE_API_URL: ${{ secrets.VITE_API_URL || github.event.repository.name || 'http://stha4us.github.io/api' }}
+          VITE_API_URL: ${{ secrets.VITE_API_URL || github.event.repository.name || 'http://stha4us.github.io' }}
+          VITE_API_BASE_URL: ${{ secrets.VITE_API_BASE_URL }}
           # PUBLIC_URL: / github.event.repository.name }}
           # CI: false 
 
