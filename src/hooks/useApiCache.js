@@ -49,13 +49,13 @@ export function useApiCache(endpoint, { ttlMs = DEFAULT_TTL_MS, enabled = true }
   const [error, setError]     = useState(null);
   const [isSlowLoad, setIsSlowLoad] = useState(false); 
 
-    // ── Slow load warning (shows after 4 seconds) ─────────────────
+    // ── Slow load warning (shows after 8 seconds) ─────────────────
   useEffect(() => {
     if (!loading) {
       setIsSlowLoad(false);
       return;
     }
-    const timer = setTimeout(() => setIsSlowLoad(true), 4000);
+    const timer = setTimeout(() => setIsSlowLoad(true), 8000);
     return () => clearTimeout(timer);
   }, [loading]);
 

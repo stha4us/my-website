@@ -1,5 +1,6 @@
-import { Suspense, lazy } from 'react';
+import { useEffect, Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { warmBackend } from './utils/warmBackend';
 import './App.css';
 
 // Import components
@@ -19,6 +20,10 @@ const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 
 // Main App Component
 function App() {
+  useEffect(() => {
+      warmBackend(); // fires once on app load, silently in background
+  }, []);
+
   return (
     <ErrorBoundary>
       <div className="app-container">
